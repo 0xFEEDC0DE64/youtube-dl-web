@@ -13,6 +13,12 @@ $options = [
         'option' => '-k -x --audio-format flac --audio-quality 0',
         'cache' => '*-%youtubeid%.flac'
     ],
+    "video_mp4" => [
+        'name' => "Video (MP4)",
+        'group' => "Video",
+        'option' => '-k -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --merge-output-format mp4',
+        'cache' => '*-%youtubeid%.mp4'
+    ],
     "best_video_audio" => [
         'name' => 'Combine best Video+Audio',
         'group' => NULL,
