@@ -129,7 +129,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <div class="row" id="results"></div>
 
-        <a class="github-fork-ribbon" href="https://github.com/0xFEEDC0DE64/youtube-dl-web" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+        <a class="github-fork-ribbon d-none d-sm-none d-md-block d-lg-block d-xl-block" href="https://github.com/0xFEEDC0DE64/youtube-dl-web" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
 
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="script.js"></script>
