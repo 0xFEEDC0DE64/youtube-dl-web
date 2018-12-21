@@ -118,5 +118,6 @@ jQuery(document).ready(function($){
                 )
             }
         });
-    })
+        $('form input').val('');
+    });
 });
