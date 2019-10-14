@@ -121,7 +121,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <option value="<?php echo $index; ?>"><?php echo htmlentities($option['name']); ?></option>
                     <?php } ?>
                 </select>
-                <input type="url" name="url" <?php if(isset($url)) { echo 'value="' . htmlentities($url) . '"'; } ?>  required="required" class="form-control" />
+                <input type="url" name="url" <?php if(isset($url)) { echo 'value="' . htmlentities($url) . '"'; } ?>  required="required" class="form-control" placeholder="Enter YouTube Url" />
                 <button type="submit" class="btn btn-primary">Los</button>
                 <a href="info.php">Service Status</a>
             </form>
