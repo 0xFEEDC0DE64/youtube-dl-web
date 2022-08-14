@@ -7,17 +7,18 @@
         <div class="container">
             <a href="index.php">Back</a>
 
-            <table class="table table-striped">
+            <table class="table table-striped table-bordered">
                 <thead>
                     <tr>
 <?php
                         $output = shell_exec('ps aux');
+
                         $lines = explode("\n", $output);
 
                         $regExpr = "^";
                         foreach($lines as $i=>$line) {
                             if($i == 0) {
-                                $columns = preg_split('/ +/', $line);
+                                $columns = preg_split('/( |\t)+/', $line);
                                 foreach($columns as $column) {
                                     echo '                        <th>' . htmlentities($column) . "</th>\n";
                                 }
@@ -40,7 +41,9 @@
 
                                 array_shift($matches);
 
-                                if($matches[0] != 'www-data') {
+                                if (count($matches) == 0) continue;
+
+                                if($matches[0] != 'http') {
                                     continue;
                                 }
 
