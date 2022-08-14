@@ -89,6 +89,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
     set_time_limit(0);
 
+    echo '[system] Executing' . 'youtube-dl ' . $option['option']. ' ' . $url . "\r\n";
     system('youtube-dl ' . $option['option']. ' ' . $url . ' 2>&1', $exitCode);
     die('exit code: ' . $exitCode);
 }
